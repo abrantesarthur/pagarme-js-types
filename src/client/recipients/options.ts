@@ -52,7 +52,7 @@ type RegisterInformationInput =
  */
 export interface RecipientCreateOptions {
   /** Frequência na qual o recebedor irá ser pago. Valores possíveis: daily, weekly, monthly */
-  transfer_interval: string;
+  transfer_interval: "daily" | "weekly" | "monthly";
   /** Dia no qual o recebedor vai ser pago. Depende do transfer_interval. Se for daily, não é necessário. Se for weekly pode ser de 1 (segunda) a 5 (sexta). Se for monthly, pode ser de 1 a 31. */
   transfer_day: string;
   /** Variável que indica se o recebedor pode receber os pagamentos automaticamente */
